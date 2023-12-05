@@ -1,10 +1,19 @@
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 1rem;
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
-  background: #f4f8fb;
-  /* background: linear-gradient(180deg, #E4E6F2 28.13%, #132EC0 91.15%); */
+  padding: 0;
+  background: linear-gradient(180deg, #e4e6f2 28.13%, #132ec0 91.15%);
+}
+
+#root {
+  height: inherit;
 }

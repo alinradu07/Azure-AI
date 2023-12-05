@@ -1,13 +1,11 @@
-import ChatCompletion from "./ChatCompletion";
 import Navigation from "./components/Navigation/Navigation";
-import ChooseTest from "./components/ChooseTest/ChooseTest";
+import ChatBot from "./components/ChatBot/ChatBot";
 
 function App() {
   return (
     <>
       <Navigation />
-      <ChooseTest />
-      <ChatCompletion />
+      <ChatBot />
     </>
   );
 }

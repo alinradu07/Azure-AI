@@ -1,6 +1,11 @@
 import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
-
-function ChatCompletion() {
+import { useRef } from "react";
+function ChatCompletion(props) {
+  const textareaRef = useRef();
+  function handleOnChange() {
+    console.log(textareaRef.current.value)
+    props.onChangeInput(textareaRef.current.value);
+  }
   const endpoint = import.meta.env.VITE_AZURE_OPENAI_ENDPOINT;
   const azureApiKey = import.meta.env.VITE_AZURE_OPENAI_KEY;
   const client = new OpenAIClient(
@@ -36,7 +41,18 @@ function ChatCompletion() {
 
   return (
     <>
-      <button onClick={handleSend}>Test</button>
+      {/* <input type="text"/> */}
+      <textarea
+        ref={textareaRef}
+        value={props.userTextarea}
+        onChange={handleOnChange}
+        name="textarea-user"
+        id="textarea-user"
+        rows="5"
+        placeholder="Enter text here"
+      ></textarea>
+
+      <button onClick={handleSend}>Send</button>
     </>
   );
 }
