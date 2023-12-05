@@ -1,0 +1,10 @@
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1rem;
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f8fb;
+  /* background: linear-gradient(180deg, #E4E6F2 28.13%, #132EC0 91.15%); */
+}
