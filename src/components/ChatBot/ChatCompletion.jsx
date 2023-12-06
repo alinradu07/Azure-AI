@@ -4,6 +4,7 @@ import styles from "./ChatCompletion.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
 
 function ChatCompletion(props) {
   const textareaRef = useRef();
@@ -62,7 +63,7 @@ function ChatCompletion(props) {
       </div>
 
       <button className={styles["button-record"]} onClick={handleSend}>
-        Record
+      <FontAwesomeIcon icon={faMicrophone} />
       </button>
     </>
   );

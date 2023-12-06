@@ -30,7 +30,6 @@ li {
 }
 
 .main .bottom {
-  flex: 0;
   display: flex;
   gap: 1rem;
 }
@@ -38,29 +37,3 @@ li {
   padding: 1em;
   border-top: 1px solid rgba(149, 148, 148, 0.4);
 }
-
-.bottom textarea {
-  flex: 1;
-  resize: none;
-  font-size: 12pt;
-  border: none;
-}
-textarea:focus {
-  outline: none;
-}
-.bottom button {
-  flex: 0;
-}
-
-/* @media screen and (max-width: 700px) {
-  .main {
-    width: 90%;
-    margin: 0 auto;
-    height: 80%;
-    position: relative;
-    transform: unset;
-    top: unset;
-    left: unset;
-    transform: unset; 
-  }
-} */
