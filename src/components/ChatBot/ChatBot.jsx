@@ -1,11 +1,19 @@
-import ChatCompletion from "./ChatCompletion";
+
 import styles from "./ChatBot.module.css";
 import { useState } from "react";
+
+//Components
+import ChatCompletion from "./ChatCompletion";
+import ChatConversation from "./ChatConversation";
+
+
+//VARS
 const DUMMY_MESSAGE = [{ role: "assistant", content: "Hi, how can I help?" }];
 
 export default function ChatBot() {
   const [messages, setMessages] = useState(DUMMY_MESSAGE);
   const [textarea, setTextarea] = useState("");
+
   function handleMessages() {
     setMessages([...messages, { role: "user", content: textarea }]);
     setTextarea("");
@@ -13,6 +21,8 @@ export default function ChatBot() {
   function handleOnChange(text) {
     setTextarea(text);
   }
+
+
   return (
     <>
       <main className={styles.main}>
@@ -21,16 +31,27 @@ export default function ChatBot() {
           {messages.length > 0 && (
             <div>
               {messages.map((message) => (
-                <li
-                  className={
-                    message.role === "assistant"
+
+              <>
+              {/* checks role and returns component absed on it */}
+                <ChatConversation 
+                  role={message.role}
+                  message={message.content}
+                  />
+              
+              
+                {/* <li
+                    className={message.role === "assistant"
                       ? `${styles.assistant}`
-                      : `${styles.user}`
-                  }
-                  key={message.content}
-                >
-                  {message.content}
-                </li>
+                      : `${styles.user}`}
+                    key={message.content}
+                  >
+                    {message.content}
+                  </li> */}
+                
+              </>
+
+
               ))}
             </div>
           )}
