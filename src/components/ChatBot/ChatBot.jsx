@@ -21,7 +21,7 @@ const conversationLogs_start = [
 export default function ChatBot() {
   
   //STATE
-  const [messages, setMessages] = useState(DUMMY_MESSAGE);
+  //const [messages, setMessages] = useState(DUMMY_MESSAGE);
   const [textarea, setTextarea] = useState("");
   const [conversationLogs, setConversationLogs] =useState(conversationLogs_start);
 

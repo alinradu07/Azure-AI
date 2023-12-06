@@ -15,12 +15,19 @@
 
 .assistant_chatBox_picture{
     padding: 0.7rem;
-    border: 1px solid red;
+    border-radius: 2rem;
+
+}
+
+.assistant_chatBox_picture img {
+    height: 3rem;
+    width: 3rem;
     border-radius: 2rem;
 }
 
 .assistant_chatBox_message{
     padding: 0.5rem;
+    text-align: start;
 }
 
 .user_chatBox {
@@ -38,7 +45,12 @@
 
 .user_chatBox_picture{
     padding: 0.7rem;
-    border: 1px solid red;
+    border-radius: 2rem;
+}
+
+.user_chatBox_picture img {
+    height: 3rem;
+    width: 3rem;
     border-radius: 2rem;
 }
 

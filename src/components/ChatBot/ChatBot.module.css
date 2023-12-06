@@ -13,7 +13,7 @@
   background: rgba(50, 50, 50, 0.2);
 }
 
-.main .content {
+.main {
   flex: 5;
 }
 
@@ -39,4 +39,10 @@ li {
 .bottom {
   padding: 1em;
   border-top: 1px solid rgba(149, 148, 148, 0.4);
+}
+
+.content{
+  overflow-y: scroll;
+  
+
 }
