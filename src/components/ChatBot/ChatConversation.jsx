@@ -12,16 +12,17 @@ export default function ChatConversation(props) {
         return (
 
             <>
-                <div className="assistant_chatBox">
-                    <div className="assistant_chatBox_picture">
-                        <img src="" alt="bot_picture" />
+                <div className={styles.assistant_chatBox} key={index}>
+                    {/* {index=+1} */}
+                    <div className={styles.assistant_chatBox_picture}>
+                        <img src={""} alt="bot_picture" />
                     </div>
-                    <div className="assistant_chatBox_message" >
+                    <div className={styles.assistant_chatBox_message} >
                         {props.message}
                     </div>
                 </div>
             </>
- 
+
         )
 
     //USER bubble case 
@@ -30,11 +31,12 @@ export default function ChatConversation(props) {
         return (
 
             <>
-                <div className="user_chatBox">
-                    <div className="user_chatBox_message" >
+                <div className={styles.user_chatBox} key={index}>
+                    {/* {index=+1} */}
+                    <div className={styles.user_chatBox_message} >
                         {props.message}
                     </div>
-                    <div className="user_chatBox_picture">
+                    <div className={styles.user_chatBox_picture}>
                         <img src="" alt="user_picture" />
                     </div>
                 </div>

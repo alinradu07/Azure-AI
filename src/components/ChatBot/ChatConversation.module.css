@@ -1,1 +1,45 @@
 /* CSS HERE  */
+
+.assistant_chatBox {
+    display: flex;
+    border-radius: 2rem;
+    margin:0.5rem;
+    padding: 0.3rem;
+
+
+    border: 1px solid gray;
+    flex-direction: row;
+    justify-content: start;
+
+}
+
+.assistant_chatBox_picture{
+    padding: 0.7rem;
+}
+
+.assistant_chatBox_message{
+    padding: 0.5rem;
+}
+
+.user_chatBox {
+    display: flex;
+    border-radius: 2rem;
+    margin:0.5rem;
+    padding: 0.3rem;
+
+
+    border: 1px solid gray;
+    flex-direction: row;
+    justify-content: end;
+
+}
+
+.user_chatBox_picture{
+    padding: 0.7rem;
+}
+
+.user_chatBox_message{
+    padding: 0.5rem;
+}
+
+
