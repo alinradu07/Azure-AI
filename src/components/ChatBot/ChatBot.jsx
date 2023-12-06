@@ -9,48 +9,53 @@ import ChatConversation from "./ChatConversation";
 
 //VARS
 const DUMMY_MESSAGE = [{ role: "assistant", content: "Hi, how can I help?" }];
+const conversationLogs_start = [
+  {
+    role: "system",
+    content: "You are an AI assistant that helps people find information.",
+  },
+  { role: "assistant", content: "Hi, how can I help?" }
+
+];
 
 export default function ChatBot() {
+  
+  //STATE
   const [messages, setMessages] = useState(DUMMY_MESSAGE);
   const [textarea, setTextarea] = useState("");
+  const [conversationLogs, setConversationLogs] =useState(conversationLogs_start);
 
-  function handleMessages() {
-    setMessages([...messages, { role: "user", content: textarea }]);
+  //SET STATE 
+  function onUserSend() {
     setTextarea("");
   }
+
   function handleOnChange(text) {
     setTextarea(text);
   }
+
+  function updateConversationLogs(updatedVersion){
+    setConversationLogs(updatedVersion);
+  }
+
 
 
   return (
     <>
       <main className={styles.main}>
         <section className={styles.content}>
-          {messages.length === 0 && <p>Start new converstation</p>}
-          {messages.length > 0 && (
+          {conversationLogs.length === 0 && <p>Start new converstation</p>}
+          {conversationLogs.length > 0 && (
             <div>
-              {messages.map((message) => (
-
+              {conversationLogs.map((message) => (
+      
               <>
               {/* checks role and returns component absed on it */}
                 <ChatConversation 
                   role={message.role}
                   message={message.content}
                   />
-              
-              
-                {/* <li
-                    className={message.role === "assistant"
-                      ? `${styles.assistant}`
-                      : `${styles.user}`}
-                    key={message.content}
-                  >
-                    {message.content}
-                  </li> */}
-                
               </>
-
 
               ))}
             </div>
@@ -60,7 +65,9 @@ export default function ChatBot() {
           <ChatCompletion
             userTextarea={textarea}
             onChangeInput={handleOnChange}
-            onUserSend={handleMessages}
+            onUserSend={onUserSend}
+            conversationLogs={conversationLogs}
+            updateConversationLogs={updateConversationLogs}
           />
         </section>
       </main>

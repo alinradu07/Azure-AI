@@ -26,7 +26,7 @@ export default function ChatConversation(props) {
         )
 
     //USER bubble case 
-    } else {
+    } else if(props.role == "user"){
 
         return (
 
