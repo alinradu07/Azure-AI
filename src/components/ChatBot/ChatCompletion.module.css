@@ -1,29 +1,31 @@
 .user-input {
+  height: 80%;
   background: white;
   display: flex;
+  justify-content: space-between;
   flex: 1;
+  border-radius: 0.3em;
 }
 
 textarea {
-  flex: 1;
   resize: none;
-  font-size: 12pt;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 1em;
+  width: 95%;
 }
 textarea:focus {
   outline: none;
 }
 
 button {
-  font-size: 1.2em;
   cursor: pointer;
   border: unset;
-  padding: 0 1.5em;
 }
 
 .button-send {
   background: white;
   color: black;
+  border-radius: 0.3em;
 }
 
 .button-send svg,
@@ -32,7 +34,7 @@ button {
 }
 
 .button-record {
-  padding: 0.8em 2em;
+  padding: 1em 1.2em;
   background: #cf5050;
   border-radius: 50%;
   box-shadow: 0px 0px 0px 10px rgba(50, 50, 50, 0.2);

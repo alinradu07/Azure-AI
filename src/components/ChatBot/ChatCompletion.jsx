@@ -54,7 +54,7 @@ function ChatCompletion(props) {
           onChange={handleOnChange}
           name="textarea-user"
           id="textarea-user"
-          rows="5"
+          // rows="5"
           placeholder="Enter text here"
         ></textarea>
         <button onClick={props.onUserSend} className={styles["button-send"]}>
