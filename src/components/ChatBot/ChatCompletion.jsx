@@ -1,9 +1,14 @@
 import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
 import { useRef } from "react";
+import styles from "./ChatCompletion.module.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
 function ChatCompletion(props) {
   const textareaRef = useRef();
   function handleOnChange() {
-    console.log(textareaRef.current.value)
+    console.log(textareaRef.current.value);
     props.onChangeInput(textareaRef.current.value);
   }
   const endpoint = import.meta.env.VITE_AZURE_OPENAI_ENDPOINT;
@@ -41,18 +46,24 @@ function ChatCompletion(props) {
 
   return (
     <>
-      {/* <input type="text"/> */}
-      <textarea
-        ref={textareaRef}
-        value={props.userTextarea}
-        onChange={handleOnChange}
-        name="textarea-user"
-        id="textarea-user"
-        rows="5"
-        placeholder="Enter text here"
-      ></textarea>
+      <div className={styles["user-input"]}>
+        <textarea
+          ref={textareaRef}
+          value={props.userTextarea}
+          onChange={handleOnChange}
+          name="textarea-user"
+          id="textarea-user"
+          rows="5"
+          placeholder="Enter text here"
+        ></textarea>
+        <button onClick={props.onUserSend} className={styles["button-send"]}>
+          <FontAwesomeIcon icon={faPaperPlane} />
+        </button>
+      </div>
 
-      <button onClick={handleSend}>Send</button>
+      <button className={styles["button-record"]} onClick={handleSend}>
+        Record
+      </button>
     </>
   );
 }

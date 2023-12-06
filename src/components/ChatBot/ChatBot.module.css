@@ -25,7 +25,7 @@ li {
   color: red;
 }
 
-.assistant{
+.assistant {
   color: blueviolet;
 }
 
@@ -33,7 +33,6 @@ li {
   flex: 0;
   display: flex;
   gap: 1rem;
-
 }
 .bottom {
   padding: 1em;
@@ -44,19 +43,13 @@ li {
   flex: 1;
   resize: none;
   font-size: 12pt;
+  border: none;
+}
+textarea:focus {
+  outline: none;
 }
 .bottom button {
   flex: 0;
-}
-
-button {
-  font-size: 1.2em;
-  cursor: pointer;
-  color: white;
-  background-color: #646cffaa;
-  border: 1px solid transparent;
-  border-radius: 0.4em;
-  padding: 0.8em 2em;
 }
 
 /* @media screen and (max-width: 700px) {

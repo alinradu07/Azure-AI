@@ -1,0 +1,27 @@
+.user-input {
+  background: white;
+  display: flex;
+  flex: 1;
+}
+
+button {
+  font-size: 1.2em;
+  cursor: pointer;
+  border: unset;
+  padding: 0 1.5em;
+}
+
+.button-send {
+  background: white;
+  color: black;
+}
+
+.button-send svg{
+    font-size: 1.5em;
+}
+
+.button-record {
+  color: white;
+  background-color: #646cffaa;
+  padding: 0.8em 2em;
+}

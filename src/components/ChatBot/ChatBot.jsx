@@ -34,12 +34,12 @@ export default function ChatBot() {
               ))}
             </div>
           )}
-          <button onClick={handleMessages}>Add message-Use this </button>
         </section>
         <section className={styles.bottom}>
           <ChatCompletion
             userTextarea={textarea}
             onChangeInput={handleOnChange}
+            onUserSend={handleMessages}
           />
         </section>
       </main>
