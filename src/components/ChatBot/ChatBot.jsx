@@ -16,21 +16,9 @@ const conversationLogs_start = [
 ];
 
 export default function ChatBot() {
-  //STATE
-  //const [messages, setMessages] = useState(DUMMY_MESSAGE);
-  const [textarea, setTextarea] = useState("");
   const [conversationLogs, setConversationLogs] = useState(
     conversationLogs_start
   );
-
-  //SET STATE
-  function onUserSend() {
-    setTextarea("");
-  }
-
-  function handleOnChange(text) {
-    setTextarea(text);
-  }
 
   function updateConversationLogs(updatedVersion) {
     setConversationLogs(updatedVersion);
@@ -52,9 +40,6 @@ export default function ChatBot() {
         </section>
         <section className={styles.bottom}>
           <ChatCompletion
-            userTextarea={textarea}
-            onChangeInput={handleOnChange}
-            onUserSend={onUserSend}
             conversationLogs={conversationLogs}
             updateConversationLogs={updateConversationLogs}
           />

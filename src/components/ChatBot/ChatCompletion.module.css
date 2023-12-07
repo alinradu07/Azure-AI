@@ -1,21 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
 .user-input {
+  font-size: 1rem;
   height: 80%;
-  background: white;
   display: flex;
   justify-content: space-between;
   flex: 1;
-  border-radius: 0.3em;
+  border-radius: 0.5em;
+  background: rgba(50, 50, 50, 0.3);
 }
 
 textarea {
+  background: transparent;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
   overflow-y: hidden;
   resize: none;
   border: 1px solid transparent;
   border-radius: 1em;
+  padding: 0.5em;
   width: 95%;
 }
 textarea:focus {
   outline: none;
+}
+textarea::placeholder {
+  color: #fff;
 }
 
 button {
@@ -24,14 +35,13 @@ button {
 }
 
 .button-send {
-  background: white;
-  color: black;
-  border-radius: 0.3em;
-  padding: 1.5em;
+  background: transparent;
+  padding-inline: 1.2em;
+  border-radius: 1em;
 }
 
 .button-send svg {
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 .button-record svg {
