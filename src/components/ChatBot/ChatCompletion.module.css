@@ -8,6 +8,7 @@
 }
 
 textarea {
+  overflow-y: hidden;
   resize: none;
   border: 1px solid transparent;
   border-radius: 1em;
@@ -26,9 +27,13 @@ button {
   background: white;
   color: black;
   border-radius: 0.3em;
+  padding: 1.5em;
 }
 
-.button-send svg,
+.button-send svg {
+  font-size: 2.5em;
+}
+
 .button-record svg {
   font-size: 1.5em;
 }

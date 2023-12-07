@@ -13,8 +13,21 @@
   background: rgba(50, 50, 50, 0.2);
 }
 
-.main {
+.main .content {
   flex: 5;
+  overflow: auto;
+  padding: 2em;
+  margin: 0.3em;
+}
+
+.main .content::-webkit-scrollbar {
+  background: transparent;
+  width: 0.7rem;
+}
+
+.main .content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 1);
+  border-radius: 1rem;
 }
 
 li {
@@ -39,10 +52,4 @@ li {
 .bottom {
   padding: 1em;
   border-top: 1px solid rgba(149, 148, 148, 0.4);
-}
-
-.content{
-  overflow-y: scroll;
-  
-
 }
