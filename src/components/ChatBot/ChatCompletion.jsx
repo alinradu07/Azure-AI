@@ -9,8 +9,6 @@ import { faCircleArrowUp, faL } from "@fortawesome/free-solid-svg-icons";
 import SpeechToTextComponent from "../SpeechRecognition/SpeechRecognition";
 
 function ChatCompletion(props) {
-  // const [myTranscript, setMyTranscript] = useState("");
-
   const [sendIsDisabled, setSendIsDisabled] = useState(true);
   const textareaRef = useRef();
 
@@ -24,16 +22,10 @@ function ChatCompletion(props) {
     }
   }
 
-  let speechToTexarea = "";
-
   function handleSpeechTranscript(transcript) {
-    // speechToTexarea = "";
     console.log("run");
-    console.log(transcript);
-    console.log("inside transcript " + speechToTexarea);
-    speechToTexarea = speechToTexarea + " " + transcript;
 
-    textareaRef.current.value = speechToTexarea;
+    textareaRef.current.value = transcript;
 
     handleOnChange();
   }
@@ -47,9 +39,6 @@ function ChatCompletion(props) {
 
   //API CALL
   async function handleSend() {
-    console.log("Value for" + speechToTexarea);
-    speechToTexarea = "";
-    console.log("Value for" + speechToTexarea);
     //STATE UPDATE AT EACH STEP IS VITAL FOR SCREEN RENDERING GOOD DO NOT REMOVE
     if (textareaRef.current.value.length === 0) return;
     //user templatye to add
@@ -75,7 +64,6 @@ function ChatCompletion(props) {
     } catch (err) {
       console.error("The sample encountered an error:", err);
       textareaRef.current.value = "";
-      speechToTexarea = "";
       setSendIsDisabled(true);
     }
   }

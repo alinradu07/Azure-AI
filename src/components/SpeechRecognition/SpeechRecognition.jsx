@@ -31,27 +31,25 @@ export default function SpeechToTextComponent({ speechTranscript }) {
 
     const processRecognizedTranscript = (event) => {
       const result = event.result;
-      console.log("Recognition result:", result);
+      // console.log("Recognition result:", result);
 
       if (result.reason === sdk.ResultReason.RecognizedSpeech) {
         const transcript = result.text;
         console.log("Transcript: -->", transcript);
         // Call a function to process the transcript as needed
 
-        // setMyTranscript(transcript);
         speechTranscript(transcript);
       }
     };
 
     const processRecognizingTranscript = (event) => {
       const result = event.result;
-      console.log("Recognition result:", result);
+      // console.log("Recognition result:", result);
       if (result.reason === sdk.ResultReason.RecognizingSpeech) {
         const transcript = result.text;
         console.log("Transcript: -->", transcript);
         // Call a function to process the transcript as needed
 
-        // setRecTranscript(transcript);
         // speechTranscript(transcript);
       }
     };
