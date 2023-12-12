@@ -43,14 +43,3 @@ button {
 .button-send svg {
   font-size: 2.2em;
 }
-
-.button-record svg {
-  font-size: 1.5em;
-}
-
-.button-record {
-  padding: 1em 1.2em;
-  background: #cf5050;
-  border-radius: 50%;
-  box-shadow: 0px 0px 0px 10px rgba(50, 50, 50, 0.2);
-}

@@ -1,61 +1,53 @@
 /* CSS HERE  */
 
 .assistant_chatBox {
-    display: flex;
-    border-radius: 1rem;
-    margin:0.5rem;
-    padding: 0.3rem;
-
-
-    border: 1px solid gray;
-    flex-direction: row;
-    justify-content: start;
-
+  display: flex;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid gray;
+  flex-direction: row;
+  justify-content: start;
 }
 
-.assistant_chatBox_picture{
-    padding: 0.7rem;
-    border-radius: 2rem;
-
+.assistant_chatBox_picture {
+  padding: 0.7rem;
+  border-radius: 2rem;
 }
 
 .assistant_chatBox_picture img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
 }
 
-.assistant_chatBox_message{
-    padding: 0.5rem;
-    text-align: start;
+.assistant_chatBox_message {
+  padding: 0.5rem;
+  text-align: start;
 }
 
 .user_chatBox {
-    display: flex;
-    border-radius: 1rem;
-    margin:0.5rem;
-    padding: 0.3rem;
+  display: flex;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.3rem;
 
-
-    border: 1px solid gray;
-    flex-direction: row;
-    justify-content: end;
-
+  border: 1px solid gray;
+  flex-direction: row;
+  justify-content: end;
 }
 
-.user_chatBox_picture{
-    padding: 0.7rem;
-    border-radius: 2rem;
+.user_chatBox_picture {
+  padding: 0.7rem;
+  border-radius: 2rem;
 }
 
 .user_chatBox_picture img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
 }
 
-.user_chatBox_message{
-    padding: 0.5rem;
+.user_chatBox_message {
+  padding: 0.5rem;
 }
-
-
