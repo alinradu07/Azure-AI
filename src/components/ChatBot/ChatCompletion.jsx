@@ -1,5 +1,5 @@
 import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useState } from "react";
 import styles from "./ChatCompletion.module.css";
 

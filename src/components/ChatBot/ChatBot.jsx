@@ -4,6 +4,7 @@ import { useState } from "react";
 //Components
 import ChatCompletion from "./ChatCompletion";
 import ChatConversation from "./ChatConversation";
+import SpeechToTextComponent from "../SpeechRecognition/SpeechRecognition.jsx";
 
 //VARS
 
@@ -24,6 +25,8 @@ export default function ChatBot() {
     setConversationLogs(updatedVersion);
   }
 
+  const [myTranscript, setMyTranscript] = useState("");
+
   return (
     <>
       <main className={styles.main}>
@@ -42,6 +45,13 @@ export default function ChatBot() {
           <ChatCompletion
             conversationLogs={conversationLogs}
             updateConversationLogs={updateConversationLogs}
+            myTranscript={myTranscript}
+          />
+        </section>
+        <section>
+          <SpeechToTextComponent
+            setMyTranscript={setMyTranscript}
+            myTranscript={myTranscript}
           />
         </section>
       </main>
